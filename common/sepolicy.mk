@@ -31,6 +31,11 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/spark/sepolicy/common/vendor
 endif
 
+ifneq ($(TARGET_SUPPORTS_GOOGLE_BATTERY), true)
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    device/spark/sepolicy/common/googlebattery
+endif
+
 # Selectively include legacy rules defined by the products
 -include device/spark/sepolicy/legacy-common/sepolicy.mk
 
