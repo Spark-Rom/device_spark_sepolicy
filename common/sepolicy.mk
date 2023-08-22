@@ -31,6 +31,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/spark/sepolicy/common/vendor
 endif
 
+TARGET_SUPPORTS_GOOGLE_BATTERY ?= false
 ifneq ($(TARGET_SUPPORTS_GOOGLE_BATTERY), true)
 BOARD_VENDOR_SEPOLICY_DIRS += \
     device/spark/sepolicy/common/googlebattery
